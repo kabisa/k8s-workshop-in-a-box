@@ -27,7 +27,7 @@ The clusters are fully isolated, with their own internal IP space.
 
 ## Accessing the clusters
 
-After the clusters are created, participants can 'provision' their own cluster via SSH:
+After the clusters are created, participants can claim their own cluster via SSH:
 
 ```
 ssh icanhazcluster@<CLOUD SERVER IP>
