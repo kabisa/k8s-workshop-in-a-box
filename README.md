@@ -20,7 +20,7 @@ The clusters are fully isolated, with their own internal IP space.
 ## Setup
 
 1. Provision a host node, as described in Requirements above.
-2. SSH into the node, clone this repository.
+2. SSH into the node, clone this repository (`git clone https://github.com/kabisa/k8s-workshop-in-a-box.git`).
 3. Run the `setup.sh` script with root privileges.
 4. Create the desired number of clusters using `./create-clusters.sh <NUMEBR OF CLUSTERS>`. Best run this from screen/tmux as it will take a while (few minutes per cluster).
 5. Done! 🙌
