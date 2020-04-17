@@ -23,6 +23,9 @@ curl -Lo ./kind https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0
 curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.17.2/bin/linux/amd64/kubectl \
   && chmod +x ./kubectl && mv kubectl /usr/local/bin/
 
+curl -L https://github.com/derailed/k9s/releases/download/v0.19.2/k9s_Linux_x86_64.tar.gz \
+  | tar -zxvf - -C /usr/local/bin/ k9s
+
 # https://kind.sigs.k8s.io/docs/user/known-issues/#pod-errors-due-to-too-many-open-files
 echo "fs.inotify.max_user_watches=524288" >> /etc/sysctl.d/90-inotify.conf
 echo "fs.inotify.max_user_instances=1024" >> /etc/sysctl.d/90-inotify.conf
