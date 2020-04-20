@@ -33,6 +33,7 @@ sysctl --load /etc/sysctl.d/90-inotify.conf
 
 # Allow passwordless SSH
 sudo sed -i 's/nullok_secure/nullok/' /etc/pam.d/common-auth
+sed -i "s/.*PasswordAuthentication.*/PasswordAuthentication yes/g" /etc/ssh/sshd_config
 cat << EOF >> /etc/ssh/sshd_config
 PermitEmptyPasswords yes
 EOF
