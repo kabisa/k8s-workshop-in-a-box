@@ -38,6 +38,16 @@ Here it is in action:
 
 ![demo](./demo.gif)
 
+### (Re)starting clusters
+
+Due to a limitation in KIND it is not possible to say "kind start cluster X" The command does not exist. You can read [this issue](https://github.com/kubernetes-sigs/kind/issues/148) 
+The main limitation is, that Kind Nodes are just docker containers and there's no extra service running on your system to start these containers when you boot.
+The solution is to simply start all containers manually. Since we know which containers are created for a cluster we've added the following command:
+
+```bash
+./start-clusters.sh
+```
+
 ## Caveats
 
 * This is horribly insecure, using unauthenticated SSH (for ease of use). It's probably best to only allow SSH access from the IP address of your workshop venue.
